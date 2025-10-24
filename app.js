@@ -4,6 +4,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import { errorHandler, notFoundHandler } from "./middlewares/errorHandler.js";
 import authRouter from "./routes/auth.js";
+import bookRouter from "./routes/books.js";
 const app = express();
 
 // Middlewares
@@ -25,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/auth", authRouter);
-app.use("/books", () => {});
+app.use("/books", bookRouter);
 
 // Not found page - after routes and before error
 app.use(notFoundHandler);

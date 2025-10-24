@@ -26,9 +26,24 @@ const userSchema = new Schema(
       default: "User",
     },
     books: {
-      borrowed: [{}],
-      read: [{}],
-      favorites: [{}],
+      borrowed: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "book",
+        },
+      ],
+      read: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "book",
+        },
+      ],
+      favorites: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "book",
+        },
+      ],
     },
   },
   {

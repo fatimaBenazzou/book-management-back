@@ -1,6 +1,5 @@
 import jwt from "jsonwebtoken";
 import userModel from "../models/user.js";
-import { success } from "zod";
 
 export async function CheckAuth(req, res, next) {
   try {

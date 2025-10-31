@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { getBooks } from "../handlers/books";
-import { CheckAuth, isAdmin } from "../middlewares/auth";
+import { getBooks } from "../handlers/books.js";
+import { CheckAuth, isAdmin } from "../middlewares/auth.js";
 
 const bookRouter = Router();
 

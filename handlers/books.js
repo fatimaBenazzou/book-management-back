@@ -1,6 +1,6 @@
 import { Types } from "mongoose";
-import bookModel from "../models/books";
-import { successResponse } from "../utils/responseFormatter";
+import bookModel from "../models/books.js";
+import { successResponse } from "../utils/responseFormatter.js";
 import { StatusCodes } from "http-status-codes";
 
 export async function getBooks(req, res) {

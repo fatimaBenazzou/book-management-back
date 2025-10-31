@@ -3,7 +3,11 @@ import { model, Schema } from "mongoose";
 const bookSchema = new Schema(
   {
     title: { type: String, required: true },
-    author: { required: true },
+    author: {
+      type: Schema.Types.ObjectId,
+      ref: "authors",
+      required: true,
+    },
     serialNumber: {
       type: String,
       required: true,
@@ -48,7 +52,10 @@ const bookSchema = new Schema(
       type: String,
     },
     keywords: [{ type: String }],
-    category: {},
+    category: {
+      type: Schema.Types.ObjectId,
+      ref: "categories",
+    },
   },
   {
     timestamps: true,
